@@ -3,6 +3,11 @@
 .new-tweet{
 
   border-radius : 5px;
+  border-style: solid;
+  box-shadow: 1px 1px 1px #888888;
+  border-width: 1px;
+  border-color: #eee;
+  border-radius : 5px;
   padding-left :1em;
   padding-right: 1em;
   padding-bottom: 0.5em;
@@ -31,6 +36,95 @@
   color : black;
 
 }
+
+.existing-tweet{
+
+  border-radius : 5px;
+  border-style: solid;
+  box-shadow: 1px 1px 1px #888888;
+  border-width: 1px;
+  border-color: black;
+  border-radius : 5px;
+  margin-top:5em;
+  background-color: white;
+
+}
+
+
+.header{
+
+  border-width: 1px;
+  font-size: 150%;
+  font-weight: bold;
+  background-color: #eee;
+  height:80px;
+}
+
+.tweet-logo{
+  width :60px;
+  height:60px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius : 5px;
+
+  float : left;
+  position: relative;
+
+  }
+
+.header-text-one{
+
+  padding-left:20px;
+  float : left;
+  margin-top:10px;
+}
+
+.header-text-two{
+
+  margin-top: 10px;
+  float:right;
+  font-size: 70%;
+
+}
+
+.middle{
+
+  clear:both;
+  border:bottom;
+  border-width: 1px;
+  line-height: 80px;
+
+}
+
+.footer{
+
+  border-width: 1px;
+  font-size: 100%;
+  background-color: #eee;
+  height:50px;
+}
+
+ .bottom-text{
+
+  padding-left: 20px;
+  border-top: solid;
+  border-width: 1px;
+  line-height: 30px;
+  position: relative;
+  width:100px;
+
+}
+
+ .icons{
+
+  float:left;
+  top:0;
+  display:none;
+
+}
+
+
+
 
 
   /*position : fixed;
