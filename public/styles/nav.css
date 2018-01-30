@@ -1,0 +1,36 @@
+/*All nav related CSS will come from this file*/
+
+#nav-bar{
+  position : fixed;
+  height : 80px;
+  background: #00a087;
+  font color: :#e8fdff;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  top : 0;
+  left :0;
+  right: 0;
+}
+
+#nav-bar .logo{
+  width :80px;
+  height:80px;
+  float : left;
+  position: relative
+}
+
+#nav-bar .header{
+
+  float : left;
+  left: 10px;
+  font-size: 200%;
+  line-height:80px;
+
+
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
