@@ -51,7 +51,7 @@
 }
 
 
-.header{
+.tweetHeader{
 
   border-width: 1px;
   font-size: 150%;
@@ -117,7 +117,7 @@
 
  .icons{
 
-  float:left;
+  float:right;
   top:0;
   display:none;
 
