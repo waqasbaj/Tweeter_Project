@@ -9,6 +9,13 @@ $(document).ready(function(){
 
   console.log(remaining_char);
 
+  $(this).parent().children('.counter').html(remaining_char);
+
+  if (remaining_char < 0){
+
+    $(this).parent().children('.counter').css("color", 'red');
+  }
+
 });
 
 });
