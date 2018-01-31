@@ -31,6 +31,16 @@
 
 }
 
+.nav-button{
+
+  float : right;
+  margin-top : 20px;
+  line-height: 40px;
+  font-size: 150%;
+  border-radius:5px;
+  color:black;
+  background-color:white;
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

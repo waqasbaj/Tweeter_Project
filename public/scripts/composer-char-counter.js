@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+  $('.new-tweet').hide();
+
   $(".new-tweet").on("keyup", "textarea", function() {
     var val = $(this).val().length;
     var remaining_char = 140 - val;
@@ -34,7 +36,36 @@ $(document).ready(function(){
     }
   });
 
+  var count = 0;
 
+  $(".nav-button").on("click", function() {
+
+    count++;
+
+    if(count%2 ===1){
+
+      $(".nav-button").css('background-color', '#D5F5E3')
+
+      $(".nav-button").css('color', 'green')
+
+      $('.new-tweet').slideToggle();
+
+      $('textarea').focus();
+
+      // $(".new-tweet").slideDown('slow', function(){
+
+      //     e.preventDefault();});
+
+    } else {
+
+      $('.new-tweet').slideToggle();
+
+      $(".nav-button").css('background-color', 'white')
+
+      $(".nav-button").css('color', 'black')
+    }
+
+  });
 
 
 });
