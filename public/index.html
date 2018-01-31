@@ -33,6 +33,25 @@
 
     <!-- External Fonts -->
     <script src="https://use.fontawesome.com/eefdfdd1e4.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+        // var $button = $('#input_button');
+        $("form").on('submit', function () {
+          event.preventDefault();
+          console.log($(this).serialize());
+          $.ajax({
+            url: 'http://localhost:8080/tweets',
+            method: 'POST',
+            data : $(this).serialize(),
+            success: function (morePostsHtml) {
+              console.log('Success: ', morePostsHtml);
+            }
+          });
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -50,33 +69,29 @@
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets/">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <input id=input_button type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
 
-      <!-- <article class=existing-tweet>
+      <article class=existing-tweet>
 
         <header class=tweetHeader>
-            <img class=tweet-logo src="https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png">
-            <p class=header-text-one>Bill Fields</p>
-            <p class=header-text-two>@MrFields</p>
+          <img class=tweet-logo src="https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png">
+          <p class=header-text-one>Bill Fields</p>
+          <p class=header-text-two>@MrFields</p>
         </header>
-        <span class=middle>Little tweet here</spam>
+        <span class=middle>Little tweet here</span>
         <footer class=footer>
           <span class="bottom-text">10 Days ago</span>
-            <span class="icons">
-              <i class="fa fa-flag" aria-hidden="true"></i>
-              <i class="fa fa-retweet" aria-hidden="true"></i>
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </span>
+          <span class="icons">
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </span>
         </footer>
- -->
+
       </article>
-
-
     </main>
-
-
   </body>
 </html>

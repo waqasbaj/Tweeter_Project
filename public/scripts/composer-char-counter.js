@@ -2,21 +2,40 @@
 $(document).ready(function(){
 
   $(".new-tweet").on("keyup", "textarea", function() {
+    var val = $(this).val().length;
+    var remaining_char = 140 - val;
 
-  var val = $(this).val().length;
+    console.log(remaining_char);
 
-  var remaining_char = 140-val;
+    $(this).parent().children('.counter').html(remaining_char);
 
-  console.log(remaining_char);
+    if (remaining_char < 0){
+      $(this).parent().children('.counter').css("color", 'red');
+    }
+  });
 
-  $(this).parent().children('.counter').html(remaining_char);
+  $("#input_button").on("click", function() {
 
-  if (remaining_char < 0){
+    if($("textarea").val().length === 0){
 
-    $(this).parent().children('.counter').css("color", 'red');
-  }
+      event.preventDefault();
 
-});
+      alert("You have not entered any text");
+    }
+  });
+
+  $("#input_button").on("click", function() {
+
+    if($("textarea").val().length > 140){
+
+      event.preventDefault();
+
+      alert("You have entered longer than acceptable tweet");
+    }
+  });
+
+
+
 
 });
 
