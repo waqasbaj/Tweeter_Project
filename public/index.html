@@ -34,24 +34,6 @@
     <!-- External Fonts -->
     <script src="https://use.fontawesome.com/eefdfdd1e4.js"></script>
 
-    <script>
-      $(document).ready(function(){
-
-        // var $button = $('#input_button');
-        $("form").on('submit', function () {
-          event.preventDefault();
-          $.ajax({
-            url: 'http://localhost:8080/tweets',
-            method: 'POST',
-            data : $(this).serialize(),
-            success: function () {
-              console.log('Success: ');
-
-            }
-          });
-        });
-      });
-    </script>
   </head>
 
   <body>
@@ -83,6 +65,7 @@
           <p class=header-text-two>@MrFields</p>
         </header>
         <span class=middle>Little tweet here</span>
+
         <footer class=footer>
           <span class="bottom-text">10 Days ago</span>
           <span class="icons">
