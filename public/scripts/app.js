@@ -45,6 +45,12 @@ function renderTweets(tweet){
       $('.container').append(outputTweet);
     });
   }
+
+  $("article").hover (function() {
+    $(this).find(".icons").show();
+    }, function() {
+    $(this).find(".icons").hide();
+  });
 }
 
 function loadTweets(){
@@ -54,6 +60,7 @@ function loadTweets(){
       success: function (userTweets) {
         renderTweets(userTweets)
       }
+
     });
 }
 

@@ -1,11 +1,13 @@
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  $("article").hover (function() {
-    $(".icons").show();
-    }, function() {
-    $(".icons").hide();
-  });
+//   debugger
 
-});
+//   $("article").hover (function() {
+//     $(this).find(".icons").show();
+//     }, function() {
+//     $(this).find(".icons").hide();
+//   });
+
+// });
 
