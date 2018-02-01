@@ -31,13 +31,15 @@ function createTweetElement(tweet){
 
 
 
-  let output = "<article class=existing-tweet><header class=tweetHeader><img class=tweet-logo src="+userAvatar+"><p class=header-text-one>"+userName+"</p><p class=header-text-two>"+userHandle+"</p></header><span class=middle>"+escape(userContent)+"</span><footer class=footer><span class=bottom-text>"+userCreated+"</span><span class=icons><i class=\"fa fa-flag\"aria-hidden=\"true\"></i><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></span></footer></article>"
+  let output = "<article class=existing-tweet><header class=tweetHeader><img class=tweet-logo src="+userAvatar+"><p class=header-text-one>"+userName+"</p><p class=header-text-two>"+userHandle+"</p></header><span class=middle>"+escape(userContent)+"</span><footer class=footer><span class=bottom-text>"+userCreated+"</span><span class=icons><i class=\"fa fa-flag\"aria-hidden=\"true\"></i><i class=\"fa fa-retweet\" aria-hidden=\"true\"></i><i class=\"fa fa-heart\" aria-hidden=\"true\"></i><span class=counterLike>0</span></span></footer></article>"
 
   return output;
 };
 
 
 function renderTweets(tweet){
+
+
 
   for (x of tweet){
     let outputTweet= createTweetElement(x);
@@ -63,6 +65,7 @@ function loadTweets(){
 
     });
 }
+loadTweets();
 
 
 $(document).ready(function(){
@@ -74,6 +77,8 @@ $(document).ready(function(){
       data : $(this).serialize(),
       success: function () {
         console.log('Success: ');
+       $(".existing-tweet").remove();
+
         loadTweets();
       }
     });
@@ -81,4 +86,4 @@ $(document).ready(function(){
   });
 });
 
-loadTweets();
+
