@@ -7,6 +7,11 @@ const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
 
+
+//There are three routes defined on this page:
+
+
+//1. The GET route is used to get all the date from the server from the tweets database  in MongoDB
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
       if (err) {
@@ -17,6 +22,8 @@ module.exports = function(DataHelpers) {
     });
   });
 
+
+//2. The POST route is used to add a new tweet to the tweet database in MongoDB
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
@@ -43,16 +50,16 @@ module.exports = function(DataHelpers) {
     });
   });
 
+//3. The PUT route is used to update the exiting tweets with the number of likes and like status in MongoDB
+
   tweetsRoutes.put("/", function(req, res) {
     if (!req.body) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
       return;
     }
 
-
     DataHelpers.updateTweet(req.body, (err) => {
       if (err) {
-
         res.status(500).json({ error: err.message });
       } else {
         res.status(201).send();

@@ -1,8 +1,5 @@
 "use strict";
 
-// Simulates the kind of delay we see with network or filesystem operations
-const simulateDelay = require("./util/simulate-delay");
-
 var ObjectId = require("mongojs").ObjectId;
 
 // Defines helper functions for saving and getting tweets, using the database `db`
@@ -22,23 +19,16 @@ module.exports = function makeDataHelpers(db) {
 
     // Get all tweets in `db`, sorted by newest first
     getTweets: function(callback) {
-
-        // const sortNewestFirst = (a, b) => a.created_at - b.created_at;
-        // callback(null, db.collection("tweets").find().sort(sortNewestFirst));
-
       db.collection("tweets").find().sort({"created_at": -1}).toArray((err, tweets) => {
         if (err) {
           return callback(err);
         }
-      //sortNewestFirst = (a, b) => a.created_at - b.created_at;
-
       callback(null, tweets);
-    });
-
+      });
     },
 
+    // Update the tweets date in `db` with information about the likes counter and the like status
     updateTweet: function(updateLikes, callback) {
-
       db.collection("tweets").update({"_id":ObjectId(updateLikes.Id)},
                                      {$set : {likes: updateLikes.count,
                                       color: updateLikes.color}}, (err, tweets) => {
@@ -47,10 +37,7 @@ module.exports = function makeDataHelpers(db) {
           return callback(err);
         }
       callback(null, true);
-    });
-
+      });
     }
-
-
   };
-}
+};
