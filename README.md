@@ -5,12 +5,11 @@ Tweeter is a simple, single-page Twitter Project. Users can add tweets and like 
 
 ## Final Project
 
-!["Snapshot of /login Page"] : (https://github.com/waqasbaj/W2_D2_TinyApp/blob/master/docs/:login%20-%20Login%20Page.png?raw=true)
+!["Snapshot of Main Page"] : (https://github.com/waqasbaj/Tweeter_Project/blob/master/docs/Screen%20Shot%202018-02-01%20at%209.00.14%20PM.png?raw=true)
 
 
-!["Snapshot of main /url Page"] : (https://github.com/waqasbaj/W2_D2_TinyApp/blob/master/docs/:urls%20-%20Main%20URL%20Display%20Page.png?raw=true)
+!["Snapshot of Main Page with Red like Button"] : (https://github.com/waqasbaj/Tweeter_Project/blob/master/docs/Screen%20Shot%202018-02-01%20at%209.00.27%20PM.png?raw=true)
 
-!["Snapshot of url modication Page"] : (https://github.com/waqasbaj/W2_D2_TinyApp/blob/master/docs/:urls:id%20-%20URL%20Modification%20Page.png?raw=true)
 
 ## Dependencies
 
