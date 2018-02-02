@@ -3,14 +3,15 @@
 .new-tweet{
   border-radius : 5px;
   border-style: solid;
-  box-shadow: 1px 1px 1px #888888;
+  box-shadow: 0 0 2px 2px #888888;
   border-width: 1px;
   border-color: #eee;
-  border-radius : 5px;
+  border-radius : 10px;
   padding-left :1em;
   padding-right: 1em;
   padding-bottom: 0.5em;
   margin-top: -0.5em;
+  background-color:#eee;
 
 }
 
@@ -28,33 +29,30 @@
 }
 
  .new-tweet span{
-
   margin-left: 335px;
   color : black;
 
 }
 
 .existing-tweet{
-
-  border-radius : 5px;
-  border-style: solid;
-  box-shadow: 1px 1px 1px #888888;
+  border-radius : 10px;
+  box-shadow: 0 0 2px 2px #888888;
   border-width: 1px;
   border-color: black;
-  border-radius : 5px;
-  margin-top:5em;
+  margin-top:1em;
   background-color: white;
 
 }
 
 
 .tweetHeader{
-
   border-width: 1px;
   font-size: 150%;
   font-weight: bold;
   background-color: #eee;
   height:80px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .tweet-logo{
@@ -63,21 +61,18 @@
   margin-left: 10px;
   margin-top: 10px;
   border-radius : 5px;
-
   float : left;
   position: relative;
 
-  }
+}
 
 .header-text-one{
-
   padding-left:20px;
   float : left;
   margin-top:10px;
 }
 
 .header-text-two{
-
   margin-top: 10px;
   float:right;
   font-size: 70%;
@@ -85,75 +80,38 @@
 }
 
 .middle{
-
   clear:both;
   border:bottom;
   border-width: 1px;
   line-height: 80px;
+  padding-left: 10px;
+  word-wrap: break-word;
 
 }
 
 .footer{
-
-  border-width: 1px;
   font-size: 100%;
   background-color: #eee;
   height:50px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top:solid;
+  border-width: 0.5px;
+
 }
 
- .bottom-text{
-
-  padding-left: 20px;
-  border-top: solid;
-  border-width: 1px;
+.bottom-text{
+  padding-left: 10px;
   line-height: 30px;
   position: relative;
   width: 100px;
 
 }
 
- .icons{
-
+.icons{
   float: right;
   top: 0;
   display:none;
-
 }
 
 
-
-
-
-  /*position : fixed;
-  height : 80px;
-  background: #00a087;
-  font color: :#e8fdff;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  top : 0;
-  left :0;
-  right: 0;*/
-/*}
-
-#nav-bar .logo{
-  width :80px;
-  height:80px;
-  float : left;
-  position: relative
-}
-
-#nav-bar .header{
-
-  float : left;
-  left: 10px;
-  font-size: 200%;
-  line-height:80px;
-
-
-}
-*/
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
