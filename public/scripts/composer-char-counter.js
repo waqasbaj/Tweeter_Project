@@ -10,6 +10,8 @@ $(document).ready(function(){
 
     if (remaining_char < 0){
       $(this).parent().children('.counter').css("color", 'red');
+    }else{
+      $(this).parent().children('.counter').css("color", 'black');
     }
   });
 
@@ -31,6 +33,7 @@ $(document).ready(function(){
   var count = 0;
 
   $(".nav-button").on("click", function() {
+
 
     count++;
     if(count%2 ===1){

@@ -3,6 +3,8 @@
 // Simulates the kind of delay we see with network or filesystem operations
 const simulateDelay = require("./util/simulate-delay");
 
+var ObjectId = require("mongojs").ObjectId;
+
 // Defines helper functions for saving and getting tweets, using the database `db`
 module.exports = function makeDataHelpers(db) {
   return {
@@ -33,7 +35,22 @@ module.exports = function makeDataHelpers(db) {
       callback(null, tweets);
     });
 
+    },
+
+    updateTweet: function(updateLikes, callback) {
+
+      db.collection("tweets").update({"_id":ObjectId(updateLikes.Id)},
+                                     {$set : {likes: updateLikes.count,
+                                      color: updateLikes.color}}, (err, tweets) => {
+
+        if (err) {
+          return callback(err);
+        }
+      callback(null, true);
+    });
+
     }
+
 
   };
 }

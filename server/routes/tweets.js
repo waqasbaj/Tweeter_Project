@@ -29,11 +29,30 @@ module.exports = function(DataHelpers) {
       content: {
         text: req.body.text
       },
+      likes : 0,
+      color: "grey",
       created_at: Date.now()
     };
 
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.status(201).send();
+      }
+    });
+  });
+
+  tweetsRoutes.put("/", function(req, res) {
+    if (!req.body) {
+      res.status(400).json({ error: 'invalid request: no data in POST body'});
+      return;
+    }
+
+
+    DataHelpers.updateTweet(req.body, (err) => {
+      if (err) {
+
         res.status(500).json({ error: err.message });
       } else {
         res.status(201).send();

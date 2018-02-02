@@ -29,28 +29,23 @@
 }
 
  .new-tweet span{
-
   margin-left: 335px;
   color : black;
 
 }
 
 .existing-tweet{
-
   border-radius : 10px;
-  /*border-style: solid;*/
   box-shadow: 0 0 2px 2px #888888;
   border-width: 1px;
   border-color: black;
   margin-top:1em;
   background-color: white;
 
-
 }
 
 
 .tweetHeader{
-
   border-width: 1px;
   font-size: 150%;
   font-weight: bold;
@@ -66,21 +61,18 @@
   margin-left: 10px;
   margin-top: 10px;
   border-radius : 5px;
-
   float : left;
   position: relative;
 
-  }
+}
 
 .header-text-one{
-
   padding-left:20px;
   float : left;
   margin-top:10px;
 }
 
 .header-text-two{
-
   margin-top: 10px;
   float:right;
   font-size: 70%;
@@ -88,18 +80,16 @@
 }
 
 .middle{
-
   clear:both;
   border:bottom;
   border-width: 1px;
   line-height: 80px;
   padding-left: 10px;
+  word-wrap: break-word;
 
 }
 
 .footer{
-
-
   font-size: 100%;
   background-color: #eee;
   height:50px;
@@ -110,8 +100,7 @@
 
 }
 
- .bottom-text{
-
+.bottom-text{
   padding-left: 10px;
   line-height: 30px;
   position: relative;
@@ -119,49 +108,10 @@
 
 }
 
- .icons{
-
+.icons{
   float: right;
   top: 0;
   display:none;
-
-
 }
 
 
-
-
-
-  /*position : fixed;
-  height : 80px;
-  background: #00a087;
-  font color: :#e8fdff;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  top : 0;
-  left :0;
-  right: 0;*/
-/*}
-
-#nav-bar .logo{
-  width :80px;
-  height:80px;
-  float : left;
-  position: relative
-}
-
-#nav-bar .header{
-
-  float : left;
-  left: 10px;
-  font-size: 200%;
-  line-height:80px;
-
-
-}
-*/
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
